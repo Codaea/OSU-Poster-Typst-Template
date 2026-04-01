@@ -5,7 +5,7 @@
 #set page(
   paper: "arch-e",
   flipped: true,
-  margin: (top: 0pt, rest: 1in),
+  margin: (rest: .5in),
 )
 
 #set text(
@@ -48,16 +48,17 @@
 ]
 
 #let header(title, authors) = place(
-  top,
+  top + center,
   block(
-    width: 46in,
+    width: 100% - 2in,
     height: header-height,
     fill: primary-color,
     inset: (x: 2em, y: 2em),
     outset: (x: 1in),
+    radius: 50pt,
   )[
     #set text(fill: white)
-    #set align(center)
+    #set align(center + horizon)
 
     #text(font: "StratumNo2", size: 85pt, weight: "bold")[#title]
     #v(0.5em)
